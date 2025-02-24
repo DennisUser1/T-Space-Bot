@@ -89,6 +89,24 @@
   overflow-y: auto;
 }
 
+.main::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 6px; 
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 .main-container {
   padding-left: 20px;
   padding-right: 20px;
@@ -112,14 +130,14 @@
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  gap: 10px;
-  overflow-y: auto;
+  gap: 12px;
+  /* overflow-y: auto; */
   overflow: hidden;
 }
 
 .chat-message.bot {
   position: relative;
-  max-width: 314px;
+  max-width: 320px;
   width: 100%;
   padding: 6px 12px;
   border-radius: 10px;
@@ -138,8 +156,8 @@
 
 .chat-message.bot::after {
   position: absolute;
-  left: -8px;
-  bottom: -10px;
+  left: -6px;
+  bottom: -14px;
   z-index: 999;
   content: url("../images/qert-tails.svg");
 }
@@ -243,7 +261,7 @@
   width: 100%;
   padding: 6px 12px;
   margin-top: 20px;
-  border-bottom: 40px;
+  border-radius: 40px;
   background: #d9e4ff;
 }
 
@@ -263,10 +281,10 @@
   background: #0038ff;
 }
 
-.btn-chat-from:focus {
+.btn-chat-form:focus {
   background: red;
 }
-.btn-chat-from:active {
+.btn-chat-form:active {
   background: red;
 }
 
@@ -313,4 +331,10 @@
 }
 .btn-microphone {
   margin-left: 10px;
+}
+
+@media screen and (min-width: 515px) {
+  .btn-answer:last-child {
+    margin-left: 10px;
+  }
 }

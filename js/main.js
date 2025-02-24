@@ -102,12 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderForm() {
     chatInput.innerHTML = `
-        <form id="chat-form>
+        <form id="chat-form">
             <input type="text" name="firstName" class="input-form input-firstName" placeholder="Ім'я" required>
             <input type="text" name="lastName" class="input-form input-lastName" placeholder="Прізвище" required>
             <input type="email" name="email" class="input-form input-email" placeholder="Email" required>
             <input type="tel" name="phone" class="input-form input-number" placeholder="Телефон" required>
-            <button class="btn-chat-from" type="submit">Надіслати</button>
+            <button class="btn-chat-form" type="submit">Надіслати</button>
         </form>
     `;
     const form = document.getElementById("chat-form");
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return phoneRegex.test(phone);
     }
   }
-  
+
   messages.forEach((msg) => appendMessage(msg));
   setTimeout(renderQuestion, 900);
 });
