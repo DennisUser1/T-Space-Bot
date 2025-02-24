@@ -130,6 +130,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  padding-bottom: 15px;
   gap: 12px;
   overflow: hidden;
 }
@@ -238,7 +239,7 @@
   margin-top: 10px;
   background: #0038ff;
   color: #fff;
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(10px);
   animation: btnAnswerIn 0.9s ease forwards;
 }
@@ -264,7 +265,7 @@
 /* form */
 .input-form {
   width: 100%;
-  padding: 8px 12px;
+  padding: 10px 12px;
   margin-top: 20px;
   border-radius: 40px;
   background: #d9e4ff;
