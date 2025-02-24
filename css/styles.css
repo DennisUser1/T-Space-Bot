@@ -99,12 +99,12 @@
 }
 
 .main::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 6px; 
+  background: #888;
+  border-radius: 6px;
 }
 
 .main::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 .main-container {
@@ -131,13 +131,12 @@
   flex-direction: column;
   padding-top: 30px;
   gap: 12px;
-  /* overflow-y: auto; */
   overflow: hidden;
 }
 
 .chat-message.bot {
   position: relative;
-  max-width: 320px;
+  max-width: 314px;
   width: 100%;
   padding: 6px 12px;
   border-radius: 10px;
@@ -165,6 +164,10 @@
 .chat-message.bot .message-date {
   display: flex;
   justify-content: end;
+  font-size: 11px;
+  color: #666;
+  margin-top: 4px;
+  font-weight: 400;
 }
 
 .message-text {
@@ -176,25 +179,21 @@
 .message-date {
   font-weight: 400;
   font-size: 11px;
-}
+  color: #666;
+  margin-left: 8px;
+  white-space: nowrap;
+} 
 
 .chat-message.user {
   display: flex;
   justify-content: flex-end;
 }
 
-/* .left-message-date {} */
-
-.right-message-date {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .chat-question.bot {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
-  color: #000
+  color: #000;
 }
 
 .chat-question.user {
@@ -222,10 +221,17 @@
   content: url("../images/qert_right-tails.svg");
 }
 
+.chat-question.user .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .btn-answer {
   font-weight: 500;
   font-size: 14px;
-  width: 152px;
+  width: 150px;
   height: 46px;
   border-radius: 40px;
   padding: 15px 25px;
@@ -244,18 +250,18 @@
   }
 }
 
-.btn-answer:nth-of-type(2n) {
+.btn-answer:not(:first-child) {
   margin-left: 10px;
 }
 
-.btn-answer:last-child {
-  margin-left: 10px;
+.btn-answer:nth-of-type(3) {
+  margin-left: 0;
 }
+
+/* .chat-input {
+} */
 
 /* form */
-.chat-form {
-  display: flex;
-}
 
 .input-form {
   width: 100%;
@@ -289,13 +295,14 @@
 }
 
 /* footer */
+
 .footer {
   background: #262626;
   padding: 10px 10px 20px 10px;
 }
 
 .form-chat {
-  display: flex
+  display: flex;
 }
 
 .btn-clip {
@@ -334,7 +341,7 @@
 }
 
 @media screen and (min-width: 515px) {
-  .btn-answer:last-child {
+  .btn-answer:nth-of-type(3) {
     margin-left: 10px;
   }
 }
